@@ -27,7 +27,10 @@ namespace Ejemplo_1.Models
         #region metodos
         public void RegistrarAlumno(int lu, string nombre, double nota) 
         {
-
+            LUs[Contador] = lu;
+            Nombres[Contador]=nombre;
+            Notas[Contador]=nota;
+            Contador++;
         }
         public int VerContador() 
         {
