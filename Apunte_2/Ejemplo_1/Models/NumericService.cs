@@ -34,19 +34,52 @@ namespace Ejemplo_1.Models
         }
         public int VerContador() 
         {
-            return 0;
+            return Contador;
         }
         public string VerAlumno(int idx) 
         {
-            return "";
+            return Nombres[idx];
         }
         public int BuscarPorLUSecuencial(int lu) 
         {
-            return 0;
+            int idx = -1;
+            int n = 0;
+
+            while (n<Contador && idx == -1) 
+            {
+                if (LUs[n] == lu) 
+                {
+                    idx = n;
+                }
+            }
+
+            return idx;
         }
         public int BuscarPorLUBinario(int lu)
         {
-            return 0;
+            int pivot = -1;
+            int inf = 0;
+            int sup = Contador - 1;
+
+            while (inf<=sup && pivot==-1) 
+            {
+                int centro = (inf + sup) / 2;
+
+                if (LUs[centro] == lu)
+                {
+                    pivot = centro;
+                }
+                else if (lu < LUs[centro])
+                {
+                    sup = centro - 1;
+                }
+                else 
+                {
+                    inf = centro + 1;
+                }
+            }
+
+            return pivot;
         }
         public void OrdenarPorLUBurbuja() 
         {

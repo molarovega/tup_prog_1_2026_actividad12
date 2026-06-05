@@ -10,15 +10,26 @@ using System.Windows.Forms;
 
 namespace Ejemplo_1
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
-        public Form1()
+        public FormPrincipal()
         {
             InitializeComponent();
         }
 
+        private void btnRegistrarAlumno_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnBuscarYVerAlumno_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnMostrarListadoOrdenado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
